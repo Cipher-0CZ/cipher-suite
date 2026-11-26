@@ -1,0 +1,12 @@
+{
+  "defaults": { "alphabet": "english" },
+  "jobs": [
+    { "id": "caesar-enc", "action": "encrypt", "cipher": "caesar", "params": { "shift": 3 }, "text": "Hello, World!" },
+    { "id": "vigenere-dec", "action": "decrypt", "cipher": "vigenere", "params": { "key": "LEMON" }, "text": "LXFOPVEFRNHR" },
+    { "id": "autokey-enc", "action": "encrypt", "cipher": "vigenere", "params": { "key": "QUEENLY", "mode": "autokey" }, "text": "ATTACKATDAWN" },
+    { "id": "playfair-enc", "action": "encrypt", "cipher": "playfair", "params": { "key": "PLAYFAIR EXAMPLE", "group_size": 5 }, "text": "Hide the gold in the tree stump" },
+    { "id": "arabic-caesar", "action": "encrypt", "cipher": "caesar", "alphabet": "arabic", "params": { "shift": 5 }, "text": "مرحبا بالعالم" },
+    { "id": "enigma", "action": "encrypt", "cipher": "enigma", "params": { "rotors": "I II III", "reflector": "B", "plugboard": "AB CD" }, "text": "HELLOWORLD" },
+    { "id": "bad-affine-key", "action": "encrypt", "cipher": "affine", "params": { "a": 2, "b": 3 }, "text": "demonstrates error reporting" }
+  ]
+}
